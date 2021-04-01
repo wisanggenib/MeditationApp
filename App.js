@@ -1,43 +1,15 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
+import {AppsNavigator} from './src/navigation/index';
+import {Provider} from 'react-redux';
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import store from './src/features';
+import {Text, View} from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-
-const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <View style={styles.wrapper}>
-        <Text>Welcome To Meditation App</Text>
-      </View>
-    </SafeAreaView>
-  );
-};
-
-const styles = StyleSheet.create({
-  wrapper: {
-    justifyContent: 'center',
-    alignContent: 'center',
-  },
-});
-
+const App = props => (
+  <Provider store={store}>
+    <AppsNavigator {...props} />
+    <View>
+      <Text>{JSON.stringify(props)}</Text>
+    </View>
+  </Provider>
+);
 export default App;
