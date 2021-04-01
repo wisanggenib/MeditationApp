@@ -1,11 +1,9 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import {useDispatch, useSelector} from 'react-redux';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 
-import {WelcomePage} from '../containers/welcome-page/index';
-import {HomePage} from '../containers/home-page/index';
+import {HomePage, WelcomePage} from '../containers/';
 
 const Stack = createStackNavigator();
 

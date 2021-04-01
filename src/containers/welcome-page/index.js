@@ -1,1 +1,3 @@
-export {default as WelcomePage} from './welcomepage.container';
+import WelcomePage from './welcomepage.container';
+
+export default WelcomePage;

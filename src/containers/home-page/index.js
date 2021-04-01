@@ -1,1 +1,3 @@
-export {default as HomePage} from './homepage.container';
+import HomePage from './homepage.container';
+
+export default HomePage;
