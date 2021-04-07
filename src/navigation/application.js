@@ -1,9 +1,9 @@
 import React from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 
-import {HomePage, WelcomePage} from '../containers/';
+import {HomePage, WelcomePage, Menu} from '../containers/';
 
 const Stack = createStackNavigator();
 
@@ -14,9 +14,15 @@ const AppNavigator = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}>
         {loginStatus ? (
-          <Stack.Screen name="home" component={HomePage} />
+          <>
+            <Stack.Screen name="home" component={HomePage} />
+            <Stack.Screen name="menu" component={Menu} />
+          </>
         ) : (
           <Stack.Screen name="welcome" component={WelcomePage} />
         )}
