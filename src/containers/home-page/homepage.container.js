@@ -12,7 +12,7 @@ class Homepage extends React.Component {
     return (
       <View>
         <Image source={Images.logo} />
-        <Text>This is Home Pages{JSON.stringify(isLogin)}</Text>
+        <Text style>This is Home Pages{JSON.stringify(isLogin)}</Text>
         <Button title="Logout" onPress={() => logout()} />
       </View>
     );
