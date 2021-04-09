@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text} from 'react-native';
+import {ScrollView} from 'react-native-gesture-handler';
 import styles from './menu.style';
 
 const _renderHeader = () => {
@@ -35,13 +36,24 @@ const _renderContent = () => {
     </View>
   );
 };
+
+const _renderMiddle = () => {
+  return (
+    <View style={{backgroundColor: 'red'}}>
+      <Text>This is Mid</Text>
+    </View>
+  );
+};
 class Menu extends React.Component {
   render() {
     const text = 'Menu';
     return (
       <View style={styles.wrapper}>
-        {_renderHeader()}
-        {_renderContent()}
+        <ScrollView>
+          {_renderHeader()}
+          {_renderContent()}
+          {_renderMiddle()}
+        </ScrollView>
       </View>
     );
   }

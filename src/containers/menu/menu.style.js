@@ -37,7 +37,7 @@ export default StyleSheet.create({
     width: width * 0.4,
     backgroundColor: 'red',
     height: 100,
-    marginVertical: 10,
+    marginVertical: 5,
     marginLeft: 5,
     //    alignSelf: 'center',
     marginRight: 'auto',
