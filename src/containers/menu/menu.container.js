@@ -1,11 +1,12 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
+import {View, Text, TouchableHighlight, Button} from 'react-native';
 import styles from './menu.style';
+import dataMenu from './data';
+import MasonryList from 'react-native-masonry-list';
 
 const _renderHeader = () => {
   return (
-    <View>
+    <View style={{paddingHorizontal: 20}}>
       <Text style={[styles.mainTitle, styles.bold]}>What Brings You</Text>
       <Text style={[styles.mainTitle]}>to Silent Moon ?</Text>
       <Text style={styles.desc}>choose a topic to focuse on:</Text>
@@ -13,47 +14,28 @@ const _renderHeader = () => {
   );
 };
 
-const _renderContent = () => {
-  return (
-    <View style={styles.content}>
-      <View style={styles.contentWrapper}>
-        <View style={styles.listContent}>
-          <Text>This is Content</Text>
-        </View>
-        <View style={styles.listContent}>
-          <Text>This is Content</Text>
-        </View>
-        <View style={styles.listContent}>
-          <Text>This is Content</Text>
-        </View>
-        <View style={[styles.listContent]}>
-          <Text>This is Content</Text>
-        </View>
-        <View style={styles.listContent}>
-          <Text>This is Content</Text>
-        </View>
-      </View>
-    </View>
-  );
-};
-
-const _renderMiddle = () => {
-  return (
-    <View style={{backgroundColor: 'red'}}>
-      <Text>This is Mid</Text>
-    </View>
-  );
-};
 class Menu extends React.Component {
   render() {
-    const text = 'Menu';
     return (
       <View style={styles.wrapper}>
-        <ScrollView>
-          {_renderHeader()}
-          {_renderContent()}
-          {_renderMiddle()}
-        </ScrollView>
+        {_renderHeader()}
+        <View style={styles.wrapperMansory}>
+          <MasonryList
+            rerender={true}
+            images={dataMenu}
+            spacing={5}
+            renderIndividualHeader={data => {
+              return (
+                <TouchableHighlight
+                  style={styles.button}
+                  underlayColor={'transparent'}
+                  onPress={() => console.log(data.datas)}>
+                  <View />
+                </TouchableHighlight>
+              );
+            }}
+          />
+        </View>
       </View>
     );
   }

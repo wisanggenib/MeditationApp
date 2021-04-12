@@ -7,7 +7,10 @@ export default StyleSheet.create({
   wrapper: {
     flex: 1,
     backgroundColor: 'white',
-    padding: 20,
+  },
+  wrapperMansory: {
+    flex: 1,
+    paddingBottom: 20,
   },
   mainTitle: {
     fontSize: Fonts.xxlarge,
@@ -20,26 +23,32 @@ export default StyleSheet.create({
     color: Colors.gray,
   },
   content: {
-    flexDirection: 'column',
-    justifyContent: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
     marginTop: 10,
   },
   contentWrapper: {
     backgroundColor: 'aqua',
-    width: '100%',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    alignContent: 'center',
-    paddingHorizontal: 10,
+    flexDirection: 'column',
   },
   listContent: {
     width: width * 0.4,
     backgroundColor: 'red',
-    height: 100,
-    marginVertical: 5,
-    marginLeft: 5,
-    //    alignSelf: 'center',
-    marginRight: 'auto',
+    marginBottom: width * 0.03,
+  },
+  button: {
+    position: 'absolute',
+    zIndex: 2,
+    width: '100%',
+    height: '100%',
+    borderRadius: 10,
+  },
+  buttonPress: {
+    position: 'absolute',
+    zIndex: 2,
+    width: '100%',
+    height: '100%',
+    borderRadius: 10,
+    backgroundColor: 'red',
   },
 });

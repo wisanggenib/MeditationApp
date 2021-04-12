@@ -3,14 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import styles from './homepage.style';
 
-import {
-  Button,
-  Image,
-  ImageBackground,
-  ScrollView,
-  Text,
-  View,
-} from 'react-native';
+import {Image, Text, View} from 'react-native';
 import {ButtonCustom} from '../../components';
 import {logout} from '../../features/actions';
 import {Images} from '../../../assets';
