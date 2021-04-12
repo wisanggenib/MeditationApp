@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import styles from './homepage.style';
 
 import {Image, Text, View} from 'react-native';
-import {ButtonCustom} from '../../components';
+import {ButtonCustom, Header} from '../../components/';
 import {logout} from '../../features/actions';
 import {Images} from '../../../assets';
 
@@ -21,7 +21,7 @@ class Homepage extends React.Component {
     const {isLogin, logout, navigation} = this.props;
     return (
       <View style={styles.wrapper}>
-        {renderHeader()}
+        <Header />
         <View style={styles.content}>
           <Image source={Images.imageWelcome} />
           <Text style={styles.title}>We are what we do</Text>

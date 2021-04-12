@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text} from 'react-native';
+import {Header, Card} from '../../components/';
 
 class MainMenu extends React.Component {
   state = {
