@@ -16,6 +16,8 @@ const _renderHeader = () => {
 
 class Menu extends React.Component {
   render() {
+    const {navigation} = this.props;
+    console.log(navigation);
     return (
       <View style={styles.wrapper}>
         {_renderHeader()}
@@ -29,7 +31,7 @@ class Menu extends React.Component {
                 <TouchableHighlight
                   style={styles.button}
                   underlayColor={'transparent'}
-                  onPress={() => console.log(data.datas)}>
+                  onPress={() => navigation.navigate('mainMenu')}>
                   <View />
                 </TouchableHighlight>
               );
