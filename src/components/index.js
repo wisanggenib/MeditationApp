@@ -1,3 +1,5 @@
 import ButtonCustom from './button';
+import Header from './header';
+import Card from './card';
 
-export {ButtonCustom};
+export {ButtonCustom, Card, Header};

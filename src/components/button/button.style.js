@@ -1,5 +1,5 @@
-const {width} = Dimensions.get('window');
 import {Dimensions, StyleSheet} from 'react-native';
+const {width} = Dimensions.get('window');
 import {Colors} from '../../style';
 
 export default StyleSheet.create({
@@ -12,7 +12,7 @@ export default StyleSheet.create({
     borderRadius: width * 0.8,
   },
   buttonSmall: {
-    width: 100,
+    width: 'auto',
   },
   text: {
     color: Colors.white,

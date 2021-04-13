@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 
-import {HomePage, WelcomePage, Menu} from '../containers/';
+import {HomePage, WelcomePage, Menu, MainMenu} from '../containers/';
 
 const Stack = createStackNavigator();
 
@@ -22,6 +22,7 @@ const AppNavigator = () => {
           <>
             <Stack.Screen name="home" component={HomePage} />
             <Stack.Screen name="menu" component={Menu} />
+            <Stack.Screen name="mainMenu" component={MainMenu} />
           </>
         ) : (
           <Stack.Screen name="welcome" component={WelcomePage} />
