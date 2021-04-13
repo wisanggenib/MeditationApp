@@ -1,10 +1,16 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
+import styles from './card-style';
+//import {Images} from '../../../assets/';
 
-const Card = () => {
+const Card = ({images, children}) => {
   return (
-    <View>
-      <Text>asdasd</Text>
+    <View style={styles.wrapper}>
+      <Image
+        style={{alignSelf: 'flex-end', borderTopRightRadius: 15}}
+        source={images}
+      />
+      <View style={{padding: 15, paddingTop: 0}}>{children}</View>
     </View>
   );
 };

@@ -17,7 +17,6 @@ const _renderHeader = () => {
 class Menu extends React.Component {
   render() {
     const {navigation} = this.props;
-    console.log(navigation);
     return (
       <View style={styles.wrapper}>
         {_renderHeader()}

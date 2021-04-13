@@ -8,14 +8,6 @@ import {ButtonCustom, Header} from '../../components/';
 import {logout} from '../../features/actions';
 import {Images} from '../../../assets';
 
-const renderHeader = () => {
-  return (
-    <View style={styles.header}>
-      <Image source={Images.logo} />
-    </View>
-  );
-};
-
 class Homepage extends React.Component {
   render() {
     const {isLogin, logout, navigation} = this.props;

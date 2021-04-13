@@ -5,6 +5,12 @@ export default {
   pic4: require('./4.png'),
   pic5: require('./5.png'),
   logo: require('./logo.png'),
+  menu1: require('./menu-1.png'),
+  menu2: require('./menu-2.png'),
+  bgMenu: require('./bg-menu.png'),
+  recom1: require('./recom-1.png'),
+  recom2: require('./recom-2.png'),
+  btnMenu: require('./btn-menu.png'),
   bgWelcome: require('./bg-welcome.png'),
   imageWelcome: require('./image-welcome.png'),
 };
