@@ -39,20 +39,29 @@ class MainMenu extends React.Component {
   _renderTopMenu = () => {
     return (
       <View style={styles.menu}>
-        <Card images={Images.menu1}>
+        <Card images={Images.menu1} myColor="#8E97FD">
           <Text style={styles.font18}>Basic</Text>
           <Text style={styles.font12}>Course</Text>
           <View style={styles.cardContent}>
             <Text style={styles.font12}>3-10 Min</Text>
-            <ButtonCustom styleCustom={styles.buttonCustom} title="START" />
+            <ButtonCustom
+              styleCustom={styles.buttonCustom}
+              title="START"
+              bgColor="#EBEAEC"
+              fontColor="#3F414E"
+            />
           </View>
         </Card>
-        <Card images={Images.menu2}>
+        <Card images={Images.menu2} myColor="#FFC97E">
           <Text style={styles.font18}>Relaxation</Text>
           <Text style={styles.font12}>Music</Text>
           <View style={styles.cardContent}>
             <Text style={styles.font12}>3-10 Min</Text>
-            <ButtonCustom styleCustom={styles.buttonCustom} title="START" />
+            <ButtonCustom
+              styleCustom={styles.buttonCustom}
+              title="START"
+              bgColor="#3F414E"
+            />
           </View>
         </Card>
       </View>

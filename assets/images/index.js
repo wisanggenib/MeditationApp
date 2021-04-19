@@ -11,6 +11,11 @@ export default {
   recom1: require('./recom-1.png'),
   recom2: require('./recom-2.png'),
   btnMenu: require('./btn-menu.png'),
+  iconHome: require('./icon-home.png'),
+  iconSleep: require('./icon-sleep.png'),
+  iconMusic: require('./icon-music.png'),
+  iconMeditate: require('./icon-meditate.png'),
+  iconPerson: require('./icon-person.png'),
   bgWelcome: require('./bg-welcome.png'),
   imageWelcome: require('./image-welcome.png'),
 };
