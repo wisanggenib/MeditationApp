@@ -4,7 +4,7 @@ import colors from '../../style/colors';
 export default StyleSheet.create({
   wrapper: {
     flex: 1,
-    padding: 15,
+    paddingHorizontal: 15,
     backgroundColor: 'white',
   },
   menu: {

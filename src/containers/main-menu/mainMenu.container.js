@@ -7,7 +7,7 @@ import {
   FlatList,
   ScrollView,
 } from 'react-native';
-import {Header, Card, ButtonCustom} from '../../components/';
+import {Header, Card, ButtonCustom, MidMenu} from '../../components/';
 import styles from './mainMenu.style';
 import {Images} from '../../../assets/';
 
@@ -39,47 +39,32 @@ class MainMenu extends React.Component {
   _renderTopMenu = () => {
     return (
       <View style={styles.menu}>
-        <Card images={Images.menu1}>
+        <Card images={Images.menu1} myColor="#8E97FD">
           <Text style={styles.font18}>Basic</Text>
           <Text style={styles.font12}>Course</Text>
           <View style={styles.cardContent}>
             <Text style={styles.font12}>3-10 Min</Text>
-            <ButtonCustom styleCustom={styles.buttonCustom} title="START" />
+            <ButtonCustom
+              styleCustom={styles.buttonCustom}
+              title="START"
+              bgColor="#EBEAEC"
+              fontColor="#3F414E"
+            />
           </View>
         </Card>
-        <Card images={Images.menu2}>
+        <Card images={Images.menu2} myColor="#FFC97E">
           <Text style={styles.font18}>Relaxation</Text>
           <Text style={styles.font12}>Music</Text>
           <View style={styles.cardContent}>
             <Text style={styles.font12}>3-10 Min</Text>
-            <ButtonCustom styleCustom={styles.buttonCustom} title="START" />
+            <ButtonCustom
+              styleCustom={styles.buttonCustom}
+              title="START"
+              bgColor="#3F414E"
+            />
           </View>
         </Card>
       </View>
-    );
-  };
-
-  _renderMidMenu = () => {
-    return (
-      <ImageBackground
-        source={Images.bgMenu}
-        // eslint-disable-next-line react-native/no-inline-styles
-        imageStyle={{borderRadius: 20}}
-        style={styles.midMenu}>
-        <View
-          // eslint-disable-next-line react-native/no-inline-styles
-          style={{
-            flex: 1,
-          }}>
-          <Text style={[styles.font18, styles.fontWhite]}>Daily Thought</Text>
-          <Text style={[styles.font12, styles.fontWhite]}>
-            Meditation 5-10 Min
-          </Text>
-        </View>
-        <View style={styles.btnStart}>
-          <Image source={Images.btnMenu} />
-        </View>
-      </ImageBackground>
     );
   };
 
@@ -115,7 +100,15 @@ class MainMenu extends React.Component {
           <Header />
           {this._renderGreeting()}
           {this._renderTopMenu()}
-          {this._renderMidMenu()}
+          <MidMenu
+            title="Daily Thought"
+            background={Images.bgMenu}
+            detail="Meditation 5-10 Min"
+            buttonImages={Images.btnMenu}
+            white={true}
+            // eslint-disable-next-line react-native/no-inline-styles
+            customStyle={{backgroundColor: '#333242', marginVertical: 15}}
+          />
           <Text style={styles.recomended}>Recomended For You</Text>
           {this._renderRecomended()}
         </ScrollView>
