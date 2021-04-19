@@ -12,10 +12,18 @@ export default {
   recom2: require('./recom-2.png'),
   btnMenu: require('./btn-menu.png'),
   iconHome: require('./icon-home.png'),
+
+  iconAll: require('./icon-all.png'),
+  iconChild: require('./icon-child.png'),
+  iconLove: require('./icon-love.png'),
+  iconMoon: require('./icon-moon.png'),
+  iconSad: require('./icon-sad.png'),
+  bgMeditate: require('./bgMeditate.png'),
+
   iconSleep: require('./icon-sleep.png'),
   iconMusic: require('./icon-music.png'),
-  iconMeditate: require('./icon-meditate.png'),
-  iconPerson: require('./icon-person.png'),
   bgWelcome: require('./bg-welcome.png'),
+  iconPerson: require('./icon-person.png'),
+  iconMeditate: require('./icon-meditate.png'),
   imageWelcome: require('./image-welcome.png'),
 };

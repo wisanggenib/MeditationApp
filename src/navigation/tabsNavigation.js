@@ -1,7 +1,7 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {View, Text, TouchableOpacity, Image} from 'react-native';
-import {Menu, MainMenu} from '../containers/';
+import {Menu, MainMenu, Meditate} from '../containers/';
 import {Images} from '../../assets/';
 
 //create Tab
@@ -111,7 +111,7 @@ const BottomTabNavigator = () => {
     <Tab.Navigator tabBar={props => <MyTabBar {...props} />}>
       <Tab.Screen name="Menu" component={MainMenu} />
       <Tab.Screen name="Sleep" component={Menu} />
-      <Tab.Screen name="Meditate" component={Menu} />
+      <Tab.Screen name="Meditate" component={Meditate} />
       <Tab.Screen name="Music" component={Menu} />
       <Tab.Screen name="Afsar" component={Menu} />
     </Tab.Navigator>
