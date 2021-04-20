@@ -20,6 +20,10 @@ export default {
   iconSad: require('./icon-sad.png'),
   bgMeditate: require('./bgMeditate.png'),
 
+  meditateMenu: require('./meditate-menu.png'),
+  meditateMenu1: require('./meditate-menu1.png'),
+  meditateMenu2: require('./meditate-menu2.png'),
+
   iconSleep: require('./icon-sleep.png'),
   iconMusic: require('./icon-music.png'),
   bgWelcome: require('./bg-welcome.png'),
