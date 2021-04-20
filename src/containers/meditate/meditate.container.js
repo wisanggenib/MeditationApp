@@ -65,7 +65,7 @@ class Meditate extends React.Component {
         keyExtractor={item => item.title}
         horizontal={true}
         showsHorizontalScrollIndicator={false}
-        style={{maxHeight: 100, marginVertical: 10}}
+        style={{maxHeight: 100}}
       />
     );
   };
@@ -77,7 +77,7 @@ class Meditate extends React.Component {
         <View style={styles.wrapper}>
           {this._renderTitle()}
           {this._renderMenu()}
-          <View style={{height: 100}}>
+          <View style={{height: 100, marginBottom: 13}}>
             <MidMenu
               title="Daily Calm"
               detail="April 30 - Pause Practice"
@@ -85,7 +85,6 @@ class Meditate extends React.Component {
               background={Images.bgMeditate}
               customStyle={{
                 backgroundColor: '#F1DDCF',
-                marginVertical: 10,
               }}
             />
           </View>
