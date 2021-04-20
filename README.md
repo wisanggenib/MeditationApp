@@ -8,3 +8,5 @@ App that help you to make your day feel better with listening to this music &lt;
 ## Running
 - npx react-native start
 - npx react-native run-android
+
+### Design : https://www.figma.com/file/aDIynQ7IgMp22CD53P1H9C/Meditation-app-UI-(Community)
