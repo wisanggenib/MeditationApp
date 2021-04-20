@@ -11,18 +11,18 @@ import {
 } from 'react-native';
 import MasonryList from 'react-native-masonry-list';
 import {Images} from '../../../assets';
-import {MidMenu} from '../../components';
+import {MidMenu, Mansory} from '../../components';
 import styles from './meditate.style';
 import dataMenu from './data';
 
 class Meditate extends React.Component {
   state = {
     data: [
-      {title: 'All', img: Images.iconAll},
-      {title: 'My', img: Images.iconLove},
-      {title: 'Anxious', img: Images.iconSad},
-      {title: 'Sleep', img: Images.iconMoon},
-      {title: 'Kids', img: Images.iconChild},
+      {id: 0, title: 'All', img: Images.iconAll},
+      {id: 1, title: 'My', img: Images.iconLove},
+      {id: 2, title: 'Anxious', img: Images.iconSad},
+      {id: 3, title: 'Sleep', img: Images.iconMoon},
+      {id: 4, title: 'Kids', img: Images.iconChild},
     ],
     myData: [1],
   };
@@ -72,29 +72,6 @@ class Meditate extends React.Component {
     );
   };
 
-  _renderMansory = () => {
-    return (
-      <MasonryList
-        rerender={true}
-        images={dataMenu}
-        renderIndividualHeader={data => {
-          return (
-            <TouchableHighlight
-              style={styles.button}
-              underlayColor={'transparent'}
-              onPress={null}>
-              <View />
-            </TouchableHighlight>
-          );
-        }}
-      />
-    );
-  };
-
-  _content = ({children}) => {
-    return <ScrollView>{children}</ScrollView>;
-  };
-
   render() {
     const {navigation} = this.props;
     return (
@@ -114,7 +91,7 @@ class Meditate extends React.Component {
               }}
             />
           </View>
-          <View style={{flex: 1}}>{this._renderMansory()}</View>
+          <Mansory datas={dataMenu} />
         </View>
       </ScrollView>
     );

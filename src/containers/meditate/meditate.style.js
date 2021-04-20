@@ -10,6 +10,7 @@ export default StyleSheet.create({
   titleWrapper: {
     justifyContent: 'center',
     alignItems: 'center',
+    marginVertical: 10,
   },
   title: {
     fontWeight: 'bold',
