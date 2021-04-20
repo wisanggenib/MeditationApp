@@ -1,6 +1,7 @@
 import ButtonCustom from './button';
+import MidMenu from './midMenu';
+import Mansory from './mansory';
 import Header from './header';
 import Card from './card';
-import MidMenu from './midMenu';
 
-export {ButtonCustom, Card, Header, MidMenu};
+export {ButtonCustom, Card, Header, MidMenu, Mansory};

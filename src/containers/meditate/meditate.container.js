@@ -7,22 +7,20 @@ import {
   TouchableOpacity,
   ScrollView,
   Image,
-  TouchableHighlight,
 } from 'react-native';
-import MasonryList from 'react-native-masonry-list';
 import {Images} from '../../../assets';
-import {MidMenu} from '../../components';
+import {MidMenu, Mansory} from '../../components';
 import styles from './meditate.style';
 import dataMenu from './data';
 
 class Meditate extends React.Component {
   state = {
     data: [
-      {title: 'All', img: Images.iconAll},
-      {title: 'My', img: Images.iconLove},
-      {title: 'Anxious', img: Images.iconSad},
-      {title: 'Sleep', img: Images.iconMoon},
-      {title: 'Kids', img: Images.iconChild},
+      {id: 0, title: 'All', img: Images.iconAll},
+      {id: 1, title: 'My', img: Images.iconLove},
+      {id: 2, title: 'Anxious', img: Images.iconSad},
+      {id: 3, title: 'Sleep', img: Images.iconMoon},
+      {id: 4, title: 'Kids', img: Images.iconChild},
     ],
     myData: [1],
   };
@@ -67,32 +65,9 @@ class Meditate extends React.Component {
         keyExtractor={item => item.title}
         horizontal={true}
         showsHorizontalScrollIndicator={false}
-        style={{maxHeight: 100, marginVertical: 10}}
+        style={{maxHeight: 100}}
       />
     );
-  };
-
-  _renderMansory = () => {
-    return (
-      <MasonryList
-        rerender={true}
-        images={dataMenu}
-        renderIndividualHeader={data => {
-          return (
-            <TouchableHighlight
-              style={styles.button}
-              underlayColor={'transparent'}
-              onPress={null}>
-              <View />
-            </TouchableHighlight>
-          );
-        }}
-      />
-    );
-  };
-
-  _content = ({children}) => {
-    return <ScrollView>{children}</ScrollView>;
   };
 
   render() {
@@ -102,7 +77,7 @@ class Meditate extends React.Component {
         <View style={styles.wrapper}>
           {this._renderTitle()}
           {this._renderMenu()}
-          <View style={{height: 100}}>
+          <View style={{height: 100, marginBottom: 13}}>
             <MidMenu
               title="Daily Calm"
               detail="April 30 - Pause Practice"
@@ -110,11 +85,10 @@ class Meditate extends React.Component {
               background={Images.bgMeditate}
               customStyle={{
                 backgroundColor: '#F1DDCF',
-                marginVertical: 10,
               }}
             />
           </View>
-          <View style={{flex: 1}}>{this._renderMansory()}</View>
+          <Mansory datas={dataMenu} disable={true} />
         </View>
       </ScrollView>
     );

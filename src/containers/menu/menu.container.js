@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, Text, TouchableHighlight, Button} from 'react-native';
+import {View, Text, TouchableHighlight, Button, ScrollView} from 'react-native';
 import styles from './menu.style';
 import dataMenu from './data';
 import MasonryList from 'react-native-masonry-list';
+import {Mansory} from '../../components/';
 
 const _renderHeader = () => {
   return (
@@ -15,27 +16,25 @@ const _renderHeader = () => {
 };
 
 class Menu extends React.Component {
+  _buttonAction = () => {
+    console.log('Hello');
+    this.props.navigation.navigate('mainMenu');
+  };
+
   render() {
     const {navigation} = this.props;
     return (
       <View style={styles.wrapper}>
         {_renderHeader()}
         <View style={styles.wrapperMansory}>
-          <MasonryList
-            rerender={true}
-            images={dataMenu}
-            spacing={5}
-            renderIndividualHeader={data => {
-              return (
-                <TouchableHighlight
-                  style={styles.button}
-                  underlayColor={'transparent'}
-                  onPress={() => navigation.navigate('mainMenu')}>
-                  <View />
-                </TouchableHighlight>
-              );
-            }}
-          />
+          <ScrollView>
+            <Mansory
+              datas={dataMenu}
+              customStyle={{padding: 10}}
+              padding={20}
+              action={() => this._buttonAction()}
+            />
+          </ScrollView>
         </View>
       </View>
     );
