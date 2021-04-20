@@ -7,9 +7,7 @@ import {
   TouchableOpacity,
   ScrollView,
   Image,
-  TouchableHighlight,
 } from 'react-native';
-import MasonryList from 'react-native-masonry-list';
 import {Images} from '../../../assets';
 import {MidMenu, Mansory} from '../../components';
 import styles from './meditate.style';
@@ -91,7 +89,7 @@ class Meditate extends React.Component {
               }}
             />
           </View>
-          <Mansory datas={dataMenu} />
+          <Mansory datas={dataMenu} disable={true} />
         </View>
       </ScrollView>
     );
