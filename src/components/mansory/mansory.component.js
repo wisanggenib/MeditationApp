@@ -7,11 +7,10 @@ const Mansory = ({datas, padding, customStyle, action, disable}) => {
   const right = datas.filter(item => item.id % 2 !== 0);
   return (
     <View style={[Styles.wrapper, customStyle]}>
-      <View>
+      <View style={Styles.contentWrap}>
         {left.map(item => (
-          <TouchableOpacity onPress={action} disabled={disable}>
+          <TouchableOpacity onPress={action} disabled={disable} key={item.id}>
             <Image
-              key={item.id}
               source={item.source}
               style={[
                 Styles.paddingItem,
@@ -21,11 +20,10 @@ const Mansory = ({datas, padding, customStyle, action, disable}) => {
           </TouchableOpacity>
         ))}
       </View>
-      <View>
+      <View style={Styles.contentWrap}>
         {right.map(item => (
-          <TouchableOpacity onPress={action} disabled={disable}>
+          <TouchableOpacity onPress={action} disabled={disable} key={item.id}>
             <Image
-              key={item.id}
               source={item.source}
               style={[
                 Styles.paddingItem,

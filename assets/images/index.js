@@ -24,6 +24,13 @@ export default {
   meditateMenu1: require('./meditate-menu1.png'),
   meditateMenu2: require('./meditate-menu2.png'),
 
+  backgroundSleep: require('./sleep.png'),
+  bgSleep: require('./bg-sleep.png'),
+  menuSleep: require('./menu-sleep.png'),
+  menuSleep1: require('./menu-sleep1.png'),
+  menuSleep2: require('./menu-sleep2.png'),
+  menuSleep3: require('./menu-sleep3.png'),
+
   iconSleep: require('./icon-sleep.png'),
   iconMusic: require('./icon-music.png'),
   bgWelcome: require('./bg-welcome.png'),

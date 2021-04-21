@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {View, Text, TouchableHighlight, Button, ScrollView} from 'react-native';
 import styles from './menu.style';
@@ -22,16 +23,14 @@ class Menu extends React.Component {
   };
 
   render() {
-    const {navigation} = this.props;
     return (
       <View style={styles.wrapper}>
         {_renderHeader()}
         <View style={styles.wrapperMansory}>
-          <ScrollView>
+          <ScrollView style={{paddingHorizontal: 20}}>
             <Mansory
               datas={dataMenu}
-              customStyle={{padding: 10}}
-              padding={20}
+              padding={10}
               action={() => this._buttonAction()}
             />
           </ScrollView>

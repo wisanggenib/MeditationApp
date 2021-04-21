@@ -10,6 +10,7 @@ export default StyleSheet.create({
   },
   wrapperMansory: {
     flex: 1,
+    marginTop: 10,
   },
   mainTitle: {
     fontSize: Fonts.xxlarge,
