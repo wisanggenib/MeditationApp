@@ -25,16 +25,20 @@ const MyTabBar = ({state, descriptors, navigation}) => {
 
   return (
     <View
-      style={{
-        flexDirection: 'row',
-        backgroundColor: 'white',
-        justifyContent: 'center',
-        alignItems: 'center',
-        paddingBottom: 10,
-        paddingTop: 10,
-        borderTopColor: 'gray',
-        borderTopWidth: 1,
-      }}>
+      style={[
+        {
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          paddingBottom: 10,
+          paddingTop: 10,
+          borderTopColor: 'gray',
+          borderTopWidth: 1,
+        },
+        state.index === 1
+          ? {backgroundColor: '#03174D', borderTopWidth: 0}
+          : {backgroundColor: 'white'},
+      ]}>
       {state.routes.map((route, index) => {
         const {options} = descriptors[route.key];
         const label =
@@ -91,12 +95,23 @@ const MyTabBar = ({state, descriptors, navigation}) => {
                   padding: 10,
                   borderWidth: 2,
                   borderRadius: 10,
-                  borderColor: isFocused ? '#8E97FD' : 'white',
+                  borderColor: isFocused
+                    ? '#8E97FD'
+                    : !isFocused && state.index === 1
+                    ? '#03174D'
+                    : 'white',
                 }}>
                 <Image source={Icon[index]} />
               </View>
               <Text
-                style={{color: isFocused ? '#8E97FD' : '#222', fontSize: 14}}>
+                style={{
+                  color: isFocused
+                    ? '#8E97FD'
+                    : !isFocused && state.index === 1
+                    ? '#98A1BD'
+                    : '#222',
+                  fontSize: 14,
+                }}>
                 {label}
               </Text>
             </View>
@@ -114,7 +129,7 @@ const BottomTabNavigator = () => {
       <Tab.Screen name="Sleep" component={Sleep} />
       <Tab.Screen name="Meditate" component={Meditate} />
       <Tab.Screen name="Music" component={Menu} />
-      <Tab.Screen name="Afsar" component={Menu} />
+      <Tab.Screen name="Profile" component={Menu} />
     </Tab.Navigator>
   );
 };
