@@ -32,8 +32,6 @@ const MyTabBar = ({state, descriptors, navigation}) => {
           alignItems: 'center',
           paddingBottom: 10,
           paddingTop: 10,
-          borderTopColor: 'gray',
-          borderTopWidth: 1,
         },
         state.index === 1
           ? {backgroundColor: '#03174D', borderTopWidth: 0}
