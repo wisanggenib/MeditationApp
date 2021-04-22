@@ -31,6 +31,8 @@ export default {
   menuSleep2: require('./menu-sleep2.png'),
   menuSleep3: require('./menu-sleep3.png'),
 
+  bgProfile: require('./profile.png'),
+
   iconSleep: require('./icon-sleep.png'),
   iconMusic: require('./icon-music.png'),
   bgWelcome: require('./bg-welcome.png'),

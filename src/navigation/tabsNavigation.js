@@ -2,7 +2,7 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {View, Text, TouchableOpacity, Image} from 'react-native';
-import {Menu, MainMenu, Meditate, Sleep} from '../containers/';
+import {Menu, MainMenu, Meditate, Sleep, Profile} from '../containers/';
 import {Images} from '../../assets/';
 
 //create Tab
@@ -129,7 +129,7 @@ const BottomTabNavigator = () => {
       <Tab.Screen name="Sleep" component={Sleep} />
       <Tab.Screen name="Meditate" component={Meditate} />
       <Tab.Screen name="Music" component={Menu} />
-      <Tab.Screen name="Profile" component={Menu} />
+      <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
   );
 };
