@@ -107,6 +107,8 @@ const MyTabBar = ({state, descriptors, navigation}) => {
                     ? '#8E97FD'
                     : !isFocused && state.index === 1
                     ? '#98A1BD'
+                    : !isFocused && state.index !== 1
+                    ? '#98A1BD'
                     : '#222',
                   fontSize: 14,
                 }}>
