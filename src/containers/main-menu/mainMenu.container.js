@@ -6,6 +6,7 @@ import {
   ImageBackground,
   FlatList,
   ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 import {Header, Card, ButtonCustom, MidMenu} from '../../components/';
 import styles from './mainMenu.style';
@@ -71,11 +72,11 @@ class MainMenu extends React.Component {
   _renderItem = ({item}) => {
     return (
       // eslint-disable-next-line react-native/no-inline-styles
-      <View style={{marginRight: 10}}>
+      <TouchableOpacity style={{marginRight: 10}}>
         <Image source={item.pict} />
         <Text style={[styles.font18]}>{item.title}</Text>
         <Text style={[styles.font12]}>Meditation 5-10 Min</Text>
-      </View>
+      </TouchableOpacity>
     );
   };
   _renderRecomended = () => {

@@ -1,6 +1,12 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {View, Text, ImageBackground, Image} from 'react-native';
+import {
+  View,
+  Text,
+  ImageBackground,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import styles from './midMenu.style';
 
 const MidMenu = ({
@@ -24,9 +30,9 @@ const MidMenu = ({
           {detail}
         </Text>
       </View>
-      <View style={[styles.content, styles.flexEnd]}>
+      <TouchableOpacity style={[styles.content, styles.flexEnd]}>
         <Image source={buttonImages} />
-      </View>
+      </TouchableOpacity>
     </ImageBackground>
   );
 };

@@ -108,7 +108,7 @@ class Sleep extends React.Component {
     return (
       <View style={{flexWrap: 'wrap', flexDirection: 'row', margin: 10}}>
         {this.state.menuData.map(item => (
-          <View style={{width: '50%', padding: 10}} key={item.id}>
+          <TouchableOpacity style={{width: '50%', padding: 10}} key={item.id}>
             <ImageBackground
               style={{
                 height: 122,
@@ -123,7 +123,7 @@ class Sleep extends React.Component {
               <Text style={Styles.titleMenu}>{item.title}</Text>
               <Text style={Styles.descMenu}>{item.desc}</Text>
             </View>
-          </View>
+          </TouchableOpacity>
         ))}
       </View>
     );
