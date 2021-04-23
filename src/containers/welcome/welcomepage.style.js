@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 
-// import {Spacing, Colors, Fonts} from '../../styles';
+import {Fonts} from '../../style';
 
 export default StyleSheet.create({
   wrapper: {
@@ -15,33 +15,33 @@ export default StyleSheet.create({
     paddingHorizontal: '14%',
   },
   formTitle: {
+    fontSize: Fonts.medium,
     color: 'white',
     fontWeight: 'bold',
-    fontSize: 16,
   },
   input: {
-    marginBottom: 15,
-    borderBottomColor: 'white',
-    borderBottomWidth: 0.7,
     paddingTop: 3,
+    marginBottom: 15,
+    borderBottomWidth: 0.7,
+    borderBottomColor: 'white',
   },
   btnLogin: {
-    marginTop: 30,
     width: '100%',
+    marginTop: 30,
   },
   orText: {
-    alignSelf: 'center',
-    marginVertical: 20,
-    fontWeight: 'bold',
     color: 'white',
+    fontWeight: 'bold',
+    marginVertical: 20,
+    alignSelf: 'center',
   },
   btnContainer: {
-    flexDirection: 'row',
     flexWrap: 'wrap',
+    flexDirection: 'row',
     justifyContent: 'space-around',
   },
   btnOther: {
-    width: '45%',
     padding: 15,
+    width: '45%',
   },
 });

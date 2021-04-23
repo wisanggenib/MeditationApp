@@ -1,11 +1,13 @@
 /* eslint-disable no-shadow */
 import React from 'react';
+
 import {ImageBackground, Text, TextInput, View} from 'react-native';
 import {Header, ButtonCustom} from '../../components';
 import {login} from '../../features/actions';
+import Styles from './welcomepage.style';
 import {Images} from '../../../assets';
 import {connect} from 'react-redux';
-import Styles from './welcomepage.style';
+import {Colors} from '../../style';
 
 class WelcomePage extends React.Component {
   render() {
@@ -23,7 +25,7 @@ class WelcomePage extends React.Component {
             <TextInput style={Styles.input} />
             <ButtonCustom
               title="Login"
-              fontColor="#7583CA"
+              fontColor={Colors.mainPurple}
               bgColor="white"
               styleCustom={Styles.btnLogin}
               action={() => login()}
@@ -32,13 +34,12 @@ class WelcomePage extends React.Component {
             <View style={Styles.btnContainer}>
               <ButtonCustom
                 title="Facebook"
-                fontColor="white"
-                bgColor="#7583CA"
+                bgColor={Colors.mainPurple}
                 styleCustom={Styles.btnOther}
               />
               <ButtonCustom
                 title="Google"
-                bgColor="#7583CA"
+                bgColor={Colors.mainPurple}
                 styleCustom={Styles.btnOther}
               />
             </View>
