@@ -17,7 +17,7 @@ export default StyleSheet.create({
   formTitle: {
     fontSize: Fonts.medium,
     color: 'white',
-    fontWeight: 'bold',
+    fontFamily: 'Pattaya-Regular',
   },
   input: {
     paddingTop: 3,

@@ -29,7 +29,7 @@ export default StyleSheet.create({
   midIMG: {
     flex: 1,
     resizeMode: 'stretch',
-    borderRadius: 10,
+    borderRadius: 5,
   },
   midContent: {
     fontSize: 14,
