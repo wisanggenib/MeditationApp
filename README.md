@@ -1,5 +1,6 @@
 # MeditationApp
 App that help you to make your day feel better with listening to this music &lt;3
+This project still under develoment 
 
 ## Setup
 - git clone https://github.com/wisanggenib/MeditationApp
